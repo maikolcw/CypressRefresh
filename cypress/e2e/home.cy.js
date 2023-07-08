@@ -16,6 +16,13 @@ describe("home page", () => {
       .contains("Testing Next.js Applications with Cypress")
   })
 
+  // get by data-test attribute with custom command
+  it("the h1 contains the correct text", () => {
+    cy.getByData("hero-heading")
+      .should('exist')
+      .contains("Testing Next.js Applications with Cypress")
+  })
+
   // Updating tests reruns all tests, with .only, only this test will run
   // it.only("the features on the homepage are correct", () => {
   //   cy.get("dt")
@@ -34,5 +41,4 @@ describe("home page", () => {
       .eq(2)
       .contains("Free and Open Source")
   })
-
 })
