@@ -1,6 +1,6 @@
 About:
 
-    Refreshing my cypress syntax
+    Refreshing my Cypress syntax.
 
 
 How to start:
@@ -14,3 +14,4 @@ How to start:
 tech stack:
 
     * Cypress
+    * JavaScript
