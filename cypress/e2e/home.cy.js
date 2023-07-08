@@ -44,4 +44,13 @@ describe("home page", () => {
         .contains("Free and Open Source")
     })
   })
+
+  context("Courses section", () => {
+    it("Course: Testing Your First Next.js Application", () => {
+      cy.getByData("course-0")
+      .find("a")
+      .contains("Get started")
+      .click()
+    })
+  })
 })
