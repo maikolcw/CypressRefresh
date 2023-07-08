@@ -24,4 +24,14 @@ describe("Newsletter Subscribe Form", () => {
             .should("not.exist")
     })
 
+    it("email already exists", () => {
+        cy.getByData("email-input")
+            .type("john@example.com")
+        cy.getByData("submit-button")
+            .click()
+        cy.getByData("server-error-message")
+            .should("exist")
+            .contains("Error: john@example.com already exists")
+    })
+
 })
