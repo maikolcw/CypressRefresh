@@ -13,4 +13,10 @@ describe("home page", () => {
     .should('exist')
     .contains("Testing Next.js Applications with Cypress")
   })
+
+  // Updating tests reruns all tests, with .only, only this test will run
+  it.only("the features on the homepage are correct", () => {
+    cy.visit("http://localhost:3000")
+  })
+  
 })
