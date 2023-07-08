@@ -17,6 +17,9 @@ describe("home page", () => {
   // Updating tests reruns all tests, with .only, only this test will run
   it.only("the features on the homepage are correct", () => {
     cy.visit("http://localhost:3000")
+    cy.get("dt")
+    .eq(0)
+    .contains("4 courses")
   })
   
 })
